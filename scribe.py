@@ -1,10 +1,13 @@
 import keyboard
+import json
 
-#whenever these letters are typed within (timout seconds) followed by a space, the second parameter will replace the text before the space was typed
-keyboard.add_abbreviation('tt', 'think ', timeout = 2)
-keyboard.add_abbreviation('ts', 'this ')
-keyboard.add_abbreviation('th', 'that ')
-keyboard.add_abbreviation('wl', 'will ')
+
+keybinds_json_file = open('keybinds.json')
+stop_script_key = 'Esc'
+
+#whenever the key is typed within (timout seconds) followed by a space, the value will replace the text before the space was typed
+for key, value in json.load(keybinds_json_file).items():
+    keyboard.add_abbreviation(key, value)
 
 #The code will keep running in the background until the command in args is pressed
-keyboard.wait('Ctrl+Esc')
+keyboard.wait(stop_script_key)
