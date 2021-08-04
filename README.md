@@ -9,4 +9,4 @@ TUTORIAL ON EDITING
   - For demo purpuses, I have included a json file that has key value pairs for testing
 
 DEPENDENCIES
-  - pip install keyboard
+  - ```pip install keyboard```
