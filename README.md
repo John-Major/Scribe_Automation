@@ -8,4 +8,5 @@ TUTORIAL ON EDITING
   - Add shortcuts by adding key value pairs to json file or use a json file from another source
   - For demo purpuses, I have included a json file that has key value pairs for testing
 
-
+DEPENDENCIES
+  - pip install keyboard
